@@ -17,6 +17,6 @@ class Book extends Publication{
     }
     //get_public_price() {prende il prezzo di partenza, aggiunge le tasse (10%) +30% - il discount% (preso dal prezzo originale)}
     get_public_price(){
-        return this.price + this.price/5*2 - this.price/100 * this.discount
+        return super.get_public_price_without_tax() + this.price * 0.1
     }
 }
