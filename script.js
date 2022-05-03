@@ -23,9 +23,23 @@ const magazine_list = [magazine1, magazine2, magazine3, magazine4, magazine5]
 
 function print_all(array){
     for(let i = 0; i < array.length; i++){
-        console.log(array[i].toString())
-        console.log('il prezzo al pubblico è', array[i].get_public_price())
+        console.log(array[i].toString());
     }
 }
 
-print_all(magazine_list)
+print_all(book_list)
+
+
+// round function using Math.
+function round_number(number, dec_places){
+    return (Math.round(number * (10**dec_places))) / (10 ** dec_places);
+}
+console.log(round_number(10.067, 2));
+
+// round funciton usign fix
+
+function round_number2(number, dec_places){
+    const rounded_number = number.toFixed(dec_places);
+    return parseFloat(rounded_number);
+}
+console.log(round_number2(10.067,2));

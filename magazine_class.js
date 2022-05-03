@@ -1,6 +1,6 @@
 class Magazine extends Publication{
     constructor(title, type, release_number, publisher, periodicy, release_date, price, copies, discount){
-        super(title, price, type, copies, publisher, discount)
+        super(title, price, type, copies, publisher, discount, 0.2)
         this.release_number = release_number
         this.periodicy = periodicy
         this.release_date = release_date
@@ -14,7 +14,7 @@ class Magazine extends Publication{
      return stringMagazine + stringMagazine2                         
     }
     //get_public_price() {prende il prezzo di partenza, aggiunge le tasse (20%) +30% - il discount% (preso dal prezzo originale)}
-    get_public_price(){
-        return super.get_public_price_without_tax() + this.price * 0.2
-    }
+    // get_public_price(){
+    //     return super.get_public_price_without_tax() + this.price * 0.2
+    // }
 } 
