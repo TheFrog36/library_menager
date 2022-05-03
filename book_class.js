@@ -1,21 +1,16 @@
-class Book{
-    constructor(title,author,genre,price,copies,pages,publication_year,publisher,discount){
-        this.title = title
+class Book extends Publication{
+    constructor(title,author,type,price,copies,pages,publication_year,publisher,discount){
+        super(title, price, type, copies, publisher, discount)
         this.author = author
-        this.genre = genre
-        this.price = price
-        this.copies = copies
         this.pages = pages
         this.publication_year = publication_year
-        this.publisher = publisher
-        this.discount = discount
     }
 
     //toString()
     toString(){
         const stringBook = "title: " + this.title + "\n" +
                            "author: " + this.author + "\n" +
-                           "genre: " + this.genre + "\n" +
+                           "type: " + this.type + "\n" +
                            "price: " + this.price + "$\n" +
                            "copies: " + this.copies + "\n" +
                            "pages: " + this.pages + "\n" +

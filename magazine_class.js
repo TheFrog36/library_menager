@@ -1,14 +1,9 @@
-class Magazine{
+class Magazine extends Publication{
     constructor(title, type, release_number, publisher, periodicy, release_date, price, copies, discount){
-        this.title = title
-        this.type = type
+        super(title, price, type, copies, publisher, discount)
         this.release_number = release_number
-        this.publisher = publisher
         this.periodicy = periodicy
         this.release_date = release_date
-        this.price = price
-        this.copies = copies
-        this.discount = discount
     }
     //toString()
     toString(){

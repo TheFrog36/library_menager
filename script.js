@@ -16,7 +16,16 @@ const magazine3 = new Magazine('Southern living', 'cooking magazine', 11, 'Sprea
 const magazine4 = new Magazine('Popular science', 'scintific journal', 278, 'La Scienza', 'daily', new Date('2022-05-04'), 9, 21, 18)
 const magazine5 = new Magazine('Weight watchers', 'sports magazine', 620, 'SPORTCOM', 'monthly', new Date('2022-06-03'), 5, 19, 6)
 
-console.log(book3.toString())
-console.log(book3.get_public_price())
-console.log(magazine1.toString())
-console.log(magazine2.get_public_price())
+
+const book_list = [book1, book2, book3, book4, book5, book6, book7, book8, book9, book10]
+const magazine_list = [magazine1, magazine2, magazine3, magazine4, magazine5]
+
+
+function print_all(array){
+    for(let i = 0; i < array.length; i++){
+        console.log(array[i].toString())
+        console.log('il prezzo al pubblico è', array[i].get_public_price())
+    }
+}
+
+print_all(magazine_list)
