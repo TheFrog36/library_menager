@@ -8,16 +8,11 @@ class Book extends Publication{
 
     //toString()
     toString(){
-        const stringBook = "title: " + this.title + "\n" +
-                           "author: " + this.author + "\n" +
-                           "type: " + this.type + "\n" +
-                           "price: " + this.price + "$\n" +
-                           "copies: " + this.copies + "\n" +
-                           "pages: " + this.pages + "\n" +
-                           "publication_year: " + this.publication_year + "\n" +
-                           "publisher: " + this.publisher + "\n" +
-                           "discount: " + this.discount + "%\n" ;
-        return stringBook
+        const stringBook = super.toString()
+        const stringBook2 = "author: " + this.author + "\n" +
+                     "pages: " + this.pages + "\n" +
+                     "publication_year: " + this.publication_year;
+        return stringBook + stringBook2
     
     }
     //get_public_price() {prende il prezzo di partenza, aggiunge le tasse (10%) +30% - il discount% (preso dal prezzo originale)}

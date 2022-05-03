@@ -7,16 +7,11 @@ class Magazine extends Publication{
     }
     //toString()
     toString(){
-        const stringaMagazine = "title: " + this.title + "\n"+
-                                "type: " + this.type + "\n" + 
-                                "release_number: " + this.release_number + "\n" + 
-                                "publisher: " + this.publisher + "\n" + 
+        const stringMagazine = super.toString()
+        const stringMagazine2 = "release_number: " + this.release_number + "\n" + 
                                 "periodicy: " + this.periodicy + "\n" + 
-                                "release_date: " + this.release_date + "\n" + 
-                                "price: " + this.price + "$\n" + 
-                                "copies: " + this.copies + "\n" + 
-                                "discount: " + this.discount + "%\n" ; 
-     return stringaMagazine                          
+                                "release_date: " + this.release_date;
+     return stringMagazine + stringMagazine2                         
     }
     //get_public_price() {prende il prezzo di partenza, aggiunge le tasse (20%) +30% - il discount% (preso dal prezzo originale)}
     get_public_price(){
