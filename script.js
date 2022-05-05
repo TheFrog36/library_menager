@@ -27,7 +27,7 @@ function print_all(array){
     }
 }
 
-print_all(book_list)
+print_all(magazine_list)
 
 
 // round function using Math.
@@ -43,3 +43,13 @@ function round_number2(number, dec_places){
     return parseFloat(rounded_number);
 }
 console.log(round_number2(10.067,2));
+
+const my_date = new Date('2022-04-04')
+
+console.log(my_date.getTime())
+
+//uso il setter
+magazine1.release_date = new Date('2022-01-15')
+console.log(magazine1.toString())
+
+
